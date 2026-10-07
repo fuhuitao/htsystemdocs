@@ -1,0 +1,19 @@
+版本发布:
+  label: 版本发布
+  permalink: /tags/release
+  description: 每周小版本的发布记录
+
+数据库:
+  label: 数据库
+  permalink: /tags/database
+  description: 表结构与描述变更
+
+测试:
+  label: 测试
+  permalink: /tags/testing
+  description: 单元测试与架构守卫
+
+工程化:
+  label: 工程化
+  permalink: /tags/engineering
+  description: 构建、CI 与开发效率
