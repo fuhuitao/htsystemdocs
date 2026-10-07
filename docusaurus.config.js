@@ -31,6 +31,12 @@ const config = {
     locales: ['zh-Hans'],
   },
 
+  // Mermaid 架构图渲染（架构/数据模型文档依赖）
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   presets: [
     [
       'classic',
@@ -92,6 +98,14 @@ const config = {
               {
                 label: '系统概览',
                 to: '/docs/intro',
+              },
+              {
+                label: '总体架构',
+                to: '/docs/architecture/overall',
+              },
+              {
+                label: '踩坑记录',
+                to: '/docs/pitfalls/',
               },
               {
                 label: '版本号规范',

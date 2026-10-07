@@ -5,7 +5,28 @@
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureEmoji {
+  font-size: 3rem;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.featureCard {
+  display: block;
+  height: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius, 12px);
+  transition: all 0.2s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.featureCard:hover .featureEmoji {
+  transform: scale(1.15);
 }

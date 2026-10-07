@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
 import Heading from '@theme/Heading';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -40,6 +41,9 @@ export default function Home() {
       title={`${siteConfig.title} 文档`}
       description="HTSystem 物流供应链管理系统的技术文档与版本发布记录">
       <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
     </Layout>
   );
 }

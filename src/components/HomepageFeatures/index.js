@@ -1,50 +1,64 @@
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    emoji: '🧭',
+    title: '总体架构',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        模块化分层 · ArchTests 架构守卫 · 认证授权 · 24 表数据模型，一张图讲清系统全貌。
       </>
     ),
+    to: '/docs/architecture/overall',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    emoji: '🕳️',
+    title: '踩坑记录',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        真实踩过的坑：现象 → 根因 → 解法 → 预防。.NET 并行竞态、SWC 缓存、软删除唯一索引……
+        同样的坑不踩第二遍。
       </>
     ),
+    to: '/docs/pitfalls/',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    emoji: '🏷️',
+    title: '版本号规范',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        CalVer 周版本制：v年.ISO周.周内修订。文档、git tag、部署三处对齐，每周一发。
       </>
     ),
+    to: '/docs/dev/versioning',
+  },
+  {
+    emoji: '📜',
+    title: '更新日志',
+    description: (
+      <>
+        每个版本一篇：改了什么、修了什么、为什么。支持 RSS 订阅。
+      </>
+    ),
+    to: '/blog',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({emoji, title, description, to}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+    <div className={clsx('col col--3')}>
+      <Link to={to} className={styles.featureCard}>
+        <div className="text--center padding-top--lg">
+          <span className={styles.featureEmoji}>{emoji}</span>
+        </div>
+        <div className="text--center padding-horiz--md padding-bottom--lg">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
+      </Link>
     </div>
   );
 }
