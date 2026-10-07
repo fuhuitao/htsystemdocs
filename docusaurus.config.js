@@ -20,9 +20,16 @@ const config = {
   //   v4: true,
   // },
 
-  // 部署到内网时改为实际域名/IP
-  url: 'http://localhost',
-  baseUrl: '/',
+  // GitHub Pages 部署地址：https://fuhuitao.github.io/htsystemdocs/
+  // 若以后迁移到内网/自定义域名，改这两行即可
+  url: 'https://fuhuitao.github.io/',
+  baseUrl: '/htsystemdocs/',
+
+  // GitHub Pages 部署信息（Actions 工作流依赖）
+  organizationName: 'fuhuitao',
+  projectName: 'htsystemdocs',
+  // GitHub Pages 静态托管推荐关闭尾斜杠（避免 /path/ 与 /path 双份缓存）
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
