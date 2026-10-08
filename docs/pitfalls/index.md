@@ -4,6 +4,8 @@
 
 ## 记录格式
 
+复制 [`_template.md`](https://github.com/fuhuitao/htsystemdocs/blob/main/docs/pitfalls/_template.md) 开写（该文件以 `_` 开头，不会被渲染成页面）：
+
 ```
 ### 坑名（一句话）
 - 现象：表面症状（报错/卡死/诡异行为）
@@ -20,6 +22,7 @@
 | [前端与工具链](toolchain.md) | SWC 缓存、BOM、ChunkLoadError |
 | [数据库](database.md) | 描述生成器、权限、软删除唯一索引 |
 | [Windows 环境](windows.md) | PowerShell 版本坑、权限、文件删除 |
+| [Git 与部署](git-github.md) | Actions 不触发、billing 锁、代理、凭据改名、历史邮箱重写 |
 
 ## 写坑原则
 
